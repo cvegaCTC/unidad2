@@ -1,0 +1,39 @@
+Tareas del facilitador antes de la sesión 22:
+    1. Crear cuenta github con email de CTC
+    2. Descargar y editar ./repo/index.html con los nombres de sus estudiantes. No olvidar cambiar "Grupo X" por el número correspondiente en footer
+    3. Inicializar repositorio dentro de ./repo y subirlo a github como repositorio privado
+    4. Agregar a las estudiantes como colaboradoras
+
+Pasos a mostrar a las estudiantes en clases:
+    1. Enlazar repositorio local a un repositorio de github
+        a. Crear repositorio público en github. Explicar importancia de README y mencionar que por ahora no lo agregaremos
+        b. Agregar repositorio de github al proyecto local que ellas elijan. 
+            git remote add <name> <url>
+           Mencionar que generalmente se utiliza el nombre "origin" y que se pueden agregar múltiples repos remotos a un mismo repo local,
+           siempre que se les asigne un nombre distinto a cada uno
+        c. Revisar si hay cambios sin commitear en el repositorio local
+            git status
+           En caso de existir cambios, pedir que realicen el commit correspondiente antes de seguir
+        d. Subir toda la información del repo local al remoto
+                git push -u origin master
+           La terminal solicitará el usuario y un "personal token", el cual debe ser generado desde nuestra cuenta de github. 
+           Mencionar que deben dirigirse a Settings > Personal access tokens > Generate new token. Deben darle un nombre (sugerir "git bash").
+        e. Dirigirse al repositorio en github para verificar que se realizó el proceso exitosamente
+    2. Clonar un repositorio desde github
+        a. Mencionar a las estudiantes que han sido agregadas como colaboradoras a un repositorio remoto en github. Si es necesario enviar la url.
+        b. Pedirles que hagan click en el botón verde "Code" y copiar la url que aparece al seleccionar el método HTTPS para clonar el repositorio
+        c. Dirigirse al directorio donde se quiera clonar el repositorio en git bash (sugerir carpeta donde almacenan sus proyectos del curso)
+        d. Clonar el repositorio
+            git clone <url del repositorio>
+        e. Escribir "ls" en git bash para verificar que se descargó el proyecto
+        f. Mostrarles a las estudiantes cómo se ve hasta el momento el sitio web y explicarles que cada una de ellas deberá buscar su nombre en index.html
+           y modificar su info e imagen, la cual puede ser una foto de ellas, ilustración o alguna imagen que las represente. 
+           Indicar además que su nombre está dentro de una etiqueta a, cuyo atributo href debe enlazar con su portafolio, el cual deben desarrollar
+        f. Pedirles que creen un archivo HTML con su nombre en la carpeta, en el cual desarrollarán su portafolio. Mencionarles que cada proyecto que realicen,
+           por pequeño o básico que parezca, debe estar en este, ya que demuestran sus capacidades y progreso.
+           Indicar además que cualquier asset (imagen, font, estilos, js, etc.) que utilicen debe ir dentro de una carpeta con su nombre en el tipo de asset 
+           correspondiente. Por ejemplo, si su nombre es Jane, debe crear las carpetas ./assets/css/jane, ./assets/js/jane, etc.
+        g. Una vez que creen sus HTML y agreguen sus carpetas de assets, deben realizar su primer commit y push. Sugerir que avisen a sus compañeras cuando 
+           realicen un push, así evitarán errores. Además, indicar que es muy importante realizar un pull antes de un push, con lo que nos aseguraremos de 
+           commitear los cambios sobre la versión más reciente del repositorio remoto.
+        10. Mencionar a las chicas que pueden seguir avanzando en sus portafolios después de clases, ya que el repositorio seguirá disponible
